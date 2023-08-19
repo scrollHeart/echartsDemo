@@ -21,3 +21,9 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+# build assets
+/output
+/dist
+/dll
+/.history
+/yarn.lock
