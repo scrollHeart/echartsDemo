@@ -1,0 +1,149 @@
+.calendar {
+    background-color: #fff
+}
+
+.calendar-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 12px 20px;
+}
+
+.calendar-title {
+    color: #000;
+    -ms-flex-item-align: center;
+    align-self: center
+}
+.calendar-title .demonstration {
+    color: rgb(110, 118, 142);
+    font-family: FZLanTingHeiS-R-GB;
+    font-size: 14px;
+    margin-right: 16px;
+}
+.calendar-title .el-input--prefix .el-input__inner {
+    padding-left: 16px;
+    color: rgb(52, 65, 86);
+}
+.calendar-title .el-icon-date {
+    display: none;
+}
+.calendar-title  .el-icon-circle-close{
+    display: none;
+}
+.calendar-title  .block {
+    position: relative;
+}
+.calendar-title  .suffix-arrow-down::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: url('../assets/image/select-down-icon.png') no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+}
+.calendar-title  .suffix-arrow-up::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: url('../assets/image/select-up-icon.png') no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+}
+.calendar__body {
+    width: 100%;
+}
+
+.calendar-table {
+    table-layout: fixed;
+    width: 100%
+}
+
+.calendar-table thead th {
+    padding: 12px 28px 17px 0;
+    color: rgb(163, 180, 204);
+    font-weight: 400;
+    text-align: center;
+    width: 40px;
+}
+
+.calendar-table:not(.is-range) td.next,
+.calendar-table:not(.is-range) td.prev {
+    color: #C0C4CC
+}
+
+.calendar-table td {
+    vertical-align: top;
+    -webkit-transition: background-color .2s ease;
+    transition: background-color .2s ease;
+    color: rgb(52, 65, 86);
+    font-size: 14px;
+}
+
+/* .calendar-table td.is-selected .bg-box{
+    background-color: #F2F8FE
+} */
+.calendar-table td.is-past {
+    color: rgb(163, 180, 204);
+    pointer-events: none;
+}
+.calendar-table td.is-today .bg-box::after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgb(0, 92, 230);
+    display: inline-block;
+    left: 50%;
+    position: absolute;
+    bottom: 5px;
+    margin-left: -2px;
+}
+.calendar-table .calendar-day {
+    height: 40px;
+    width: 40px;
+}
+.calendar-table .bg-box {
+    position: relative;
+}
+.calendar-table .bg-box:hover {
+    cursor: pointer;
+    background-color: #F2F8FE
+}
+.bg-box >div {
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+}
+.calendar-table td:nth-child(-n+5) .bg-box:hover >div:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -4px;
+    top: -4px;
+    width: 14px;
+    height: 14px;
+    background: url('../assets/image/no-work.png') no-repeat;
+    background-size: 100%;
+}
+.calendar-table td:nth-child(n+6) .bg-box:hover >div:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -4px;
+    top: -4px;
+    width: 14px;
+    height: 14px;
+    background: url('../assets/image/work.png') no-repeat;
+    background-size: 100%;
+}
