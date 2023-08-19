@@ -75,9 +75,6 @@ export default {
         .felx-main-con {
             margin-left: 100px;
         }
-        h3 {
-            text-align: left;
-        }
     }
 }
 </style>

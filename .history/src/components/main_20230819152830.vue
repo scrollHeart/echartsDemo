@@ -2,7 +2,6 @@
     <div class="flex-wrap">
         <el-row class="tac">
             <el-col>
-                <h5>echartsDemo</h5>
                 <el-menu
                     :default-active="activeIndex"
                     class="el-menu-vertical-demo"
@@ -65,18 +64,12 @@ export default {
         width: 200px;
         height: 100vh;
         border-right: 1px solid #f1f1f1;
-        .el-menu {
-            border-right: none;
-        }
     }
     .flex-right {
         width: calc(100% - 200px);
         height: 100vh;
         .felx-main-con {
             margin-left: 100px;
-        }
-        h3 {
-            text-align: left;
         }
     }
 }
